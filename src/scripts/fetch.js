@@ -33,9 +33,9 @@ export async function getJson(url) {
 
 export async function getJsonPiped(path) {
   const root =
-    new URLSearchParams(location.search).get('pipedapi') ||
-    useStore().getItem('pipedapi') ||
-    'pipedapi.kavin.rocks';
+    new URLSearchParams(location.search).get('vfy') ||
+    useStore().getItem('vfy') ||
+    'vfy.netlify.app';
 
   return await getJson('https://' + root + path);
 }
